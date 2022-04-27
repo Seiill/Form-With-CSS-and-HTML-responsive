@@ -1,0 +1,253 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.ContactusPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:#095a55  
+}
+.ContactusPage::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    Left: 0;
+    width: 50%;
+    height: 100%;
+    background: #fff38e;
+}
+.ContactusInfoContainer{
+    position: relative;
+    min-width: 1100px;
+    min-height: 550px;
+    display: flex;
+    z-index: 1000;
+    background:#fff;
+    
+}
+
+.ContactInfo{
+    position: absolute;
+    top: 40px;
+    width: 350px;
+    height: calc(100% - 80px);
+    background: #095a55;
+    z-index: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow:0 20px 25px rgba(0,0,0,0.15);
+}
+
+.ContactInfoH2{
+    color:#fff;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.InfoUl{
+    position: relative;
+    margin: 20px 0;
+}
+.InfoLi{
+    position: relative;
+    List-style: none;
+    display: flex;
+    margin: 20px 0;
+    cursor: pointer;
+    align-items: flex-start;
+}
+.SpanSymbol:nth-child(1){
+    width: 30px;
+    min-width: 30px;
+}
+.SpanSymbol:nth-child(1){
+    max-width: 100%;
+    filter: invert(1);
+}
+.SpanDescription:nth-child(2){
+    color:#fff;
+    margin-left: 10px;
+    font-weight: 300;
+}
+
+.SocialContactInfo{
+    position: relative;
+    display: flex;
+}
+.SocialContainerLi{
+    list-style: none;
+    margin-right: 15px;
+}
+
+.LinkSciA{
+    text-decoration: none;
+}
+.IconSciImg{
+    width: 30px;
+    min-width: 30px;
+    max-width: 100%;
+    filter: invert(1);
+}
+
+
+.ContactForm{
+    position: absolute;
+    padding: 70px 50px;
+    padding-left: 250px;
+    margin-left: 150px;
+    width: calc(100% - 150px);
+    height: 100%;
+    background:#fff;
+    box-shadow: 8 50px 50px rgba(0,0,0,0.25);
+}
+.ContactFormH2{
+    color: #0f3959;
+    font-size: 24px;
+    font-weight: 500;
+}
+.ContactFormBox{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+.ContactInputBox{
+    position: relative;
+    margin-bottom: 35px;
+}
+.ContactInputBox.w50{
+    width: 47%;
+
+}
+.ContactInputBox.w100{
+    width: 100%;
+}
+.ContactInput,
+.ContactTextArea{
+    width:100%;
+    resize: none;
+    padding: 5px 0;
+    font-size: 16px;
+    font-weight: 300;
+    color: #333;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #777;
+}
+.ContactTextArea{
+    height: 120px;
+}
+.ContactSpanText{
+    position: absolute;
+    Left: 0;
+    padding: 5px 0;
+    pointer-events: none;
+    font-size: 18px;
+    font-weight: 300;
+    transition: 0.3s;
+}
+.ContactInput:focus~.ContactSpanText,
+.ContactInput:valid~.ContactSpanText,
+.ContactTextArea:focus~.ContactSpanText,
+.ContactTextArea:valid~.ContactSpanText{
+    transform: translateY(-20px);
+    font-size: 12px;
+    font-weight: 400;
+    Letter-spacing: 1px;
+    color: #095a55;
+    font-weight: 500;
+}
+.ContactInput[type="submit"]{
+    position: relative;
+    cursor: pointer;
+    background: #095a55;
+    color:#fff;
+    border: none;
+    max-width: 150px;
+    padding: 12px;
+    float: right;
+}
+.ContactInput:hover{
+    background: #0d948b;
+}
+/*Responsive*/
+@media (max-width: 1200px)
+    {
+    .ContactusInfoContainer{
+    width: 90%;
+    min-width: auto;
+    margin: 20px;
+    box-shadow:0 20px 50px rgba(0,0,0,0.2);
+}
+.ContactInfo {
+
+top: 0;
+height: 500px;
+position: relative;
+box-shadow: none;
+}
+.ContactForm{
+    position: relative;
+    width: calc(100% - 350px);
+    padding-left: 0;
+    margin-left: 0;
+    padding: 40px;
+    height: 550px;
+    box-shadow: none;
+}
+}
+@media (max-width: 991px)
+{
+.ContactusPage{
+background: #fff38e;
+}
+.ContactusPage::before{
+    display: none;
+    }
+    
+
+.ContactusInfoContainer{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.ContactForm{
+    width:100%;
+    height: auto;
+}
+.ContactInfo{
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+}
+.SocialContactInfo{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+}
+
+@media (max-width: 600px){
+.ContactForm{
+    padding:25px;
+    }
+.ContactInfo{
+    padding:25px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.SocialContactInfo{
+    margin-top: 40px;
+}
+.ContactInputBox.w50{
+    width:100%;
+}
+}
